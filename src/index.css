@@ -1,21 +1,31 @@
-body {
-   font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #B0DB9C 20%, #ECFAE5 100%);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #333;
-    padding: 20px;
+@media (max-width: 480px) {
+  body {
+    flex-direction: column;
+    padding: 10px;
+  }
 }
 
-img{
-  width: 500px;
-  height: 200px;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #B0DB9C 20%, #ECFAE5 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  padding: 20px;
+}
+
+img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   border-radius: 20px;
   border: 4px solid black;
 }
+
 .tokoh-container {
+  width: 100%;
   max-width: 800px;
   margin: 40px auto;
   padding: 30px;
@@ -23,14 +33,11 @@ img{
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   animation: fadeInUp 1s ease;
-  
-  
-}
-.tokoh-container:hover {
- transform:translateX(5px) ;
-  
 }
 
+.tokoh-container:hover {
+  transform: translateX(5px);
+}
 
 .tokoh-title {
   text-align: center;
@@ -46,25 +53,26 @@ img{
 }
 
 .tokoh-section {
-  margin-bottom: 25px; background-color: #A0C878;
+  margin-bottom: 25px;
+  background-color: #A0C878;
   border-radius: 10px;
 }
+
 .tokoh-section:hover {
-  transform: translatey(5px);
-   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.4s ease-in ;
+  transform: translateY(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease-in;
 }
 
 .tokoh-section h4 {
-  color: #374151;
+  color: #CAE8BD;
   margin-bottom: 10px;
   font-size: 1.5rem;
-  color: #CAE8BD;
   padding: 15px;
 }
+
 .tokoh-section h5 {
   color: black;
-
   font-size: 1.2rem;
   margin-top: -20px;
   margin-bottom: 10px;
@@ -75,10 +83,7 @@ img{
   font-size: 1rem;
   color: #4b5563;
   line-height: 1.6;
-  padding-left: 20px ;
-  padding-right: 20px;
-  padding-bottom: 10px;
- 
+  padding: 0 20px 10px;
 }
 
 .tokoh-section ul {
@@ -101,14 +106,64 @@ img{
   }
 }
 
-
-.tokoh-header{
+.tokoh-header {
   background-color: #DDEB9D;
   padding: 20px;
   border-radius: 20px;
 }
-.tokoh-header:hover{
-transform: translateY(5px);
+
+.tokoh-header:hover {
+  transform: translateY(5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.4s ease-in ;
+  transition: all 0.4s ease-in;
+}
+
+/* MEDIA QUERIES RESPONSIF */
+@media (max-width: 768px) {
+  .tokoh-title {
+    font-size: 2rem;
+  }
+
+  .tokoh-section h4 {
+    font-size: 1.3rem;
+  }
+
+  .tokoh-section h5 {
+    font-size: 1.1rem;
+  }
+
+  .tokoh-section p,
+  .tokoh-section ul {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tokoh-container {
+    padding: 20px;
+  }
+
+  .tokoh-title {
+    font-size: 1.8rem;
+  }
+
+  .tokoh-subtitle {
+    font-size: 1rem;
+  }
+
+  .tokoh-section h4 {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .tokoh-section h5 {
+    font-size: 1rem;
+  }
+
+  .tokoh-section p,
+  .tokoh-section ul {
+    font-size: 0.9rem;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
